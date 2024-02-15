@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Color Search Box</title>
+    </head>
+    <style>
+        @import url('https://font.googleeapis.com/css?family=Poppins&dispaly=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: 0.8s all;
+             
+        }
+        .color-search{
+            border-radius: 24px;
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+        }
+
+        input{
+            caret-color: #aeaeae;
+            text-transform: uppercase;
+            box-shadow: 0px 0px 15px #aeaeae; 
+        }
+
+    </style>
+
+
+    <body>
+        <div class="container">
+            <input type="search" id="color-input" class="color-search" placeholder="#0081CB or Blue" autofocus>
+        </div>
+        <script type="text/javascript">
+            let colorInput = document.getElementById('color-input');
+            colorInput.addEventListener('keyup', function(e){
+             document.body.style.background=e.target.value;
+            });
+        </script>
+
+
+    </body>
+</html>
